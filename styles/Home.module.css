@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: 70vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,8 @@
 .footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
+  background: #ddd;
+  border-top: 1px solid #c7c4c4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +64,7 @@
 }
 
 .code {
-  background: #fafafa;
+  color: #111;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -72,13 +73,15 @@
 }
 
 .grid {
-  display: flex;
-  align-items: center;
+  height: auto;
+  width: 90%;
+  margin: 5px auto;
+  display: grid;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+  }
 
 .card {
   margin: 1rem;
@@ -89,14 +92,15 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  color: #111111;
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.35s ease-in-out;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
   color: #0070f3;
-  border-color: #0070f3;
+  box-shadow: 1px 10px 20px -10px #111;
 }
 
 .card h3 {
@@ -119,4 +123,5 @@
     width: 100%;
     flex-direction: column;
   }
+  
 }
